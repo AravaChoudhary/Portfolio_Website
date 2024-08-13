@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+CONTACT
+{% endblock %}
+
+{% block content %}
+<style>
+    .boxed-container {
+        width: 950%; /* Adjust the width for responsiveness */
+        max-width: 800px; /* Set a maximum width for larger screens */
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffcccc; /* White background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    .btn-send {
+        margin-top: 20px; /* Adjust the margin-top value to move the button down */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .boxed-container {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .boxed-container {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="container mx-auto px-4 py-8">
+    <div class="boxed-container bg-blue-400 rounded-lg overflow-hidden shadow-lg mb-8" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-3xl font-bold mb-4 text-gray-800">Contact Me</h2>
+        <form action="{% url 'contact_submit' %}" method="POST" class="space-y-4">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="name" class="block text-gray-800">Name</label>
+                <input type="text" name="name" id="name" class="form-control rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-800">Email</label>
+                <input type="email" name="email" id="email" class="form-control rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-4">
+                <label for="subject" class="block text-gray-800">Subject</label>
+                <input type="text" name="subject" id="subject" class="form-control rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50" required>
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block text-gray-800">Message</label>
+                <textarea name="message" id="message" rows="4" class="form-control rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50" required></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-warning btn-send" style="background-color: #ff48a5; border-color: #00FFF0; color: #FFFFFF;" data-aos="fade-up" data-aos-delay="400">Send Message</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
