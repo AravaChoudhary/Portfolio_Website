@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0&96kj52q(i0faz70y!uu+2(wp99j=k257=h7*u=f9w+$u(e)u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1']
 #'aranika.me','localhost','192.168.248.57', '192.168.1.5'
 
 
@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'ELF.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'website_db',
-        'USER': 'root',
-        'PASSWORD': 'OutfitX4518$',
+        'USER': 'postgres',
+        'PASSWORD': 'Nainika1234$',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 
