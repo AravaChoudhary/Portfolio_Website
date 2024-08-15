@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'website_db',
         'USER': 'postgres',
         'PASSWORD': 'Nainika1234$',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
