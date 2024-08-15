@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'ELF.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': 'asmfYVw1Qpg2',
-        'HOST': 'ep-calm-lake-a4b4ai6g-pooler.us-east-1.aws.neon.tech',
+        'NAME': 'website_db',
+        'USER': 'postgres',
+        'PASSWORD': 'Nainika1234$',
+        'HOST': 'localhost',
         'PORT' : '5432',
     }
 }
