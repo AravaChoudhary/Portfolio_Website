@@ -1,0 +1,15 @@
+
+nav {
+    background-color:#ff48a5 ;
+    color: #011413;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: #ad357f;
+    text-decoration: none;
+    margin: 0rem 1rem;
+}
+
