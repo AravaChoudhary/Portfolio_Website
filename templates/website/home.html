@@ -35,25 +35,24 @@
         }
         
         /* styles.css */
-#typing-effect {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 3em;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid orange; /* Cursor */
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-}
+        #typing-effect {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: calc(1.5em + 2vw); /* Responsive font size */
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid orange; /* Cursor */
+            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+        }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: orange; }
-}
-
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: orange; }
+        }
     </style>
 </head>
 <body class="bg-blue-100 transition-colors duration-300">
@@ -72,7 +71,7 @@
                         <a class="nav-link" href="{% url 'skills' %}" style="color:#FFFFFF;">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{%url 'projects' %}" style="color:#FFFFFF;">Projects</a>
+                        <a class="nav-link" href="{% url 'projects' %}" style="color:#FFFFFF;">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'interest' %}" style="color:#FFFFFF;">Interests</a>
