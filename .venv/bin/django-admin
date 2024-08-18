@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/Users/aravachoudhary/Desktop/elf/.venv/bin/python3.12
+=======
+#!/Users/aravachoudhary/Desktop/elf/ELF/.venv/bin/python3.12
+>>>>>>> origin/main
 # -*- coding: utf-8 -*-
 import re
 import sys

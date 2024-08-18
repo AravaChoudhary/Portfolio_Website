@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+INTERESTS
+{% endblock %}
+
+{% block content %}
+    <div class="container py-4">
+        <!-- Interests Cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for nika in nikas %}
+            <div class="col">
+                <div class="text-white shadow-lg" data-aos="fade-up" data-aos-duration="1000" style="max-width: 350px;">
+                    <img src="{{ nika.image.url }}" class="card-img-top rounded-top" alt="{{ nika.name }}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <br>
+                        <h3 class="card-title text-xl font-bold mb-2">{{ nika.name }}</h3>
+                        <p class="card-text mb-3">{{ nika.description|truncatewords:15 }}</p>
+                        {% comment %} <a href="{% url 'interests_details' nika.id %}" class="btn btn-light btn-sm">
+                            {{ nika.type }} - {{ nika.id }}
+                        </a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

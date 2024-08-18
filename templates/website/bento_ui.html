@@ -1,0 +1,122 @@
+{% load static tailwind_tags%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arava Choudhary's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bento-ui/1.0.0/bento-ui.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bento-navbar">
+        <div class="bento-container">
+            <a href="#" class="bento-navbar-brand">Arava Choudhary</a>
+            <ul class="bento-navbar-nav">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Aspiring Machine Learning Enthusiast | Data Science Explorer | Competitive Coding</p>
+        <a href="#projects" class="bento-btn bento-btn-primary">View Projects</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="bento-section">
+        <div class="bento-container">
+            <h2>About Me</h2>
+            <div class="bento-card">
+                <p>Hello, I'm Arava Choudhary. I am a career-driven individual with a passion for learning and exploring new technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bento-section">
+        <div class="bento-container">
+            <h2>Projects</h2>
+            <div class="projects">
+                <!-- Project 1 -->
+                <div class="bento-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bento-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bento-section">
+        <div class="bento-container">
+            <h2>Skills</h2>
+            <div class="bento-progress-bar" data-value="90">HTML</div>
+            <div class="bento-progress-bar" data-value="80">CSS</div>
+            <div class="bento-progress-bar" data-value="75">JavaScript</div>
+            <div class="bento-progress-bar" data-value="85">Python</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bento-section">
+        <div class="bento-container">
+            <h2>Contact Me</h2>
+            <form class="bento-form">
+                <div class="bento-form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="bento-input">
+                </div>
+                <div class="bento-form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="bento-input">
+                </div>
+                <div class="bento-form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="bento-input"></textarea>
+                </div>
+                <button type="submit" class="bento-btn bento-btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bento-footer">
+        <div class="bento-container">
+            <p>&copy; 2024 Arava Choudhary</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bento-ui/1.0.0/bento-ui.min.js"></script>
+</body>
+</html>
