@@ -85,19 +85,19 @@ WSGI_APPLICATION = 'ELF.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'verceldb',
-#         'USER': 'default',
-#         'PASSWORD': 'asmfYVw1Qpg2',
-#         'HOST': 'ep-calm-lake-a4b4ai6g-pooler.us-east-1.aws.neon.tech', 
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'asmfYVw1Qpg2',
+        'HOST': 'ep-calm-lake-a4b4ai6g-pooler.us-east-1.aws.neon.tech', 
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
