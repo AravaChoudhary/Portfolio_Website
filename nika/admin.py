@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import cp,Visitor
+from .models import cp,Visitor,Projects
 
 # Register your models here.
 admin.site.register(cp)
@@ -11,3 +11,5 @@ class VisitorAdmin(admin.ModelAdmin):
     search_fields = ('ip_address','user_agent')
 
 admin.site.register(Visitor,VisitorAdmin)
+
+admin.site.register(Projects)

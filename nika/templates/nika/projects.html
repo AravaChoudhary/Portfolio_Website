@@ -1,23 +1,34 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Projects
+PROJECTS
 {% endblock %}
 
 {% block content %}
-<div class="container mx-auto px-4 py-16">
-    <h1 class="text-6xl font-bold mb-8 text-center">Projects</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for project in projects %}
-        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-48 object-cover" src="{{ project.image.url }}" alt="{{ project.title }}">
-            <div class="p-6">
-                <h2 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">{{ project.title }}</h2>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description }}</p>
-                <a href="{{ project.url }}" target="_blank" class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition-colors">View Project</a>
+    <div class="container py-4">
+        <!-- Projects Cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for nika in nikass %}
+            <div class="col">
+                <div class="text-white shadow-lg" data-aos="fade-up" data-aos-duration="1000" style="max-width: 350px;">
+                    <!-- Image wrapped in a clickable link to the live URL -->
+                    <a href="{{ nika.live_url }}" target="_blank">
+                        <img src="{{ nika.image.url }}" class="card-img-top rounded-top" alt="{{ nika.name }}" style="height: 200px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <br>
+                        <h3 class="card-title text-xl font-bold mb-2">{{ nika.name }}</h3>
+                        <p class="card-text mb-3">{{ nika.description|truncatewords:25 }}</p>
+
+                        <!-- Buttons for GitHub and Live Url -->
+                        <div class="d-flex flex-column gap-2">
+                            <a href="{{ nika.live_url }}" class="btn btn-primary" style="background-color: #ff48a5; border-color: #00FFF0; color: #FFFFFF; width: 100%;" data-aos="fade-up" data-aos-delay="400">Visit Site</a>
+                            <a href="{{ nika.github_url }}" class="btn btn-primary" style="background-color: #808080; border-color: #D3D3D3; color: #FFFFFF; width: 100%;" data-aos="fade-up" data-aos-delay="400">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
 {% endblock %}

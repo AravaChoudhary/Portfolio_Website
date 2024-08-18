@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from .models import cp
+from .models import cp,Projects
 from django.http import JsonResponse
 
 def all_nika(request):
@@ -9,7 +9,12 @@ def skills(request):
     return render(request, 'nika/skills.html')
 
 def projects(request):
-    return render(request, 'nika/projects.html')
+    nikass = Projects.objects.all()
+    return render(request, 'nika/projects.html', {'nikass':nikass})
+
+def project_details(request,project_id):
+    pros = get_object_or_404(Projects, pk=project_id)
+    return render(request, 'nika/project_details.html',{'pros':pros})
 
 def cultivated_pursuits(request):
     nikas = cp.objects.all()
