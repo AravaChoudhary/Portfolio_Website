@@ -14,7 +14,15 @@ SKILLS
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: scale(1.14); /* Zoom effect */
+        }
+
+        .card-body {
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .card:hover .card-body {
+            transform: translateY(-10px); /* Optional: Slight lift of the content */
         }
     </style>
 
@@ -39,7 +47,6 @@ SKILLS
                     </div>
                 </div>
             </div>
-
 
             <!-- Skill Category 2: Data Science -->
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
@@ -79,7 +86,6 @@ SKILLS
                 </div>
             </div>
 
-
             <!-- Skill Category 4: Programming Languages -->
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
                 <div class="card shadow-lg">
@@ -94,7 +100,6 @@ SKILLS
                     </div>
                 </div>
             </div>
-
 
             <!-- Skill Category 5: Tools and Computer Fundamental -->
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up">
