@@ -15,10 +15,14 @@ INTERESTS
                     <div class="card-body">
                         <br>
                         <h3 class="card-title text-xl font-bold mb-2">{{ nika.name }}</h3>
-                        <p class="card-text mb-3">{{ nika.description|truncatewords:15 }}</p>
+                        <p class="card-text mb-3">{{ nika.description|truncatewords:31 }}</p>
                         {% comment %} <a href="{% url 'interests_details' nika.id %}" class="btn btn-light btn-sm">
                             {{ nika.type }} - {{ nika.id }}
-                        </a> {% endcomment %}
+                            Dastaan , Dastaras , Khayaal , Raabta
+                        </a>  {% endcomment %}
+                        {% if forloop.counter == 3 %}
+                        <a href="https://medium.com/@aravachoudhary11" class="btn btn-primary" style="background-color: #ff48a5; border-color: #00FFF0; color: #FFFFFF;" data-aos="fade-up" data-aos-delay="400">Check out Here !</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
